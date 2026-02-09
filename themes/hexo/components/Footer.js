@@ -1,6 +1,6 @@
 import { BeiAnGongAn } from '@/components/BeiAnGongAn'
 import BeiAnSite from '@/components/BeiAnSite'
-import PoweredBy from '@/components/PoweredBy'
+// import PoweredBy from '@/components/PoweredBy' // 1. 注释掉或删除这行引用
 import { siteConfig } from '@/lib/config'
 
 const Footer = ({ title }) => {
@@ -35,7 +35,12 @@ const Footer = ({ title }) => {
         <h1 className='text-xs pt-4 text-light-400 dark:text-gray-400'>
           {title} {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}
         </h1>
-        <PoweredBy className='justify-center' />
+        
+        {/* 2. 原来的 PoweredBy 已被替换为下面的自定义代码 */}
+        <div className='text-xs pt-2 text-light-400 dark:text-gray-400'>
+          Powered by <a href='https://www.xpy.me/' className='font-bold underline dark:text-gray-300'>FXY</a>
+        </div>
+        
       </span>
       <br />
     </footer>
